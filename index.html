@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Audio Generator - Standard English TTS</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #0f172a;
+            --accent: #38bdf8;
+            --text-light: #f8fafc;
+            --text-gray: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--secondary);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            background: radial-gradient(circle at top right, #1e3a8a 0%, transparent 40%),
+                radial-gradient(circle at bottom left, #0f172a 0%, transparent 40%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #60a5fa, #a855f7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease-out 0.2s backwards;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
+            animation: fadeInUp 1s ease-out 0.4s backwards;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background: var(--primary-dark);
+            box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.5);
+        }
+
+        /* Features Grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 4rem auto 0;
+            padding: 0 2rem;
+            animation: fadeInUp 1s ease-out 0.6s backwards;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .feature-desc {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <h1>Turn Text into<br>Lifelike English Audio</h1>
+        <p>
+            Generate high-quality dialogues with native accents (US, UK, Australia, India).
+            Powered by Google Neural2 & Gemini AI.
+        </p>
+
+        <a href="https://script.google.com/macros/s/AKfycbzlA9Hn3xhVFi3uekCsRG6n2NpH3hoN6_aNliF3-07DCBEhoejD5aVRnZoZjcJgwWqx/exec"
+            class="cta-button" target="_blank">
+            🚀 Launch App Now
+        </a>
+
+        <div class="features">
+            <div class="feature-card">
+                <span class="feature-icon">🇺🇸🇬🇧</span>
+                <h3 class="feature-title">Multi-Accent Support</h3>
+                <p class="feature-desc">Choose from 4 major English regions: US, UK, Australia, and India.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🎭</span>
+                <h3 class="feature-title">Conversation Mode</h3>
+                <p class="feature-desc">Create realistic 2-person dialogues with distinct Male & Female voices.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🎧</span>
+                <h3 class="feature-title">Premium Neural Voices</h3>
+                <p class="feature-desc">Utilizing Google's latest Neural2 technology for human-like intonation.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
